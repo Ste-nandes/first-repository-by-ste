@@ -1,0 +1,254 @@
+body{
+    background: #641da7;
+    color: rgb(0, 0, 0);
+  }
+  
+  .body {
+    width: 960px;
+    margin: auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  
+  
+  H2 { 
+    text-align: center }
+  
+    H3 {
+     text-align: center }
+  
+     h4 { 
+      text-align: center }
+  
+      H5 { 
+        text-align: center }
+  
+        H6 { 
+          text-align: center }
+  
+          p { 
+            text-align: center }
+  
+            body {
+              font-size: medium;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+  
+  .slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+  }
+  
+  .slides input {
+    display: none;
+  }
+  
+  .slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 800px;
+  }
+  
+  .manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{ 
+    border: 2px solid #fff;
+    PADDING: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background-color: #fff;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -25%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -50%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -75%;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer
+    transition: 1s
+  }
+  
+  .navigation-auto{
+    position:absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+   background-color: #FFF;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #FFF;
+   }
+  
+   #radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #FFF;
+   }
+  
+   #radio1:checked ~ .navigation-auto .auto-btn4{
+    background-color: #FFF;
+   }
+  
+   * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e;
+    height: 8vh;
+  }
+  
+  main {
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #23232e;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  
